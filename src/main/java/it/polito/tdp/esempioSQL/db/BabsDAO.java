@@ -21,8 +21,10 @@ public class BabsDAO {
 			Connection conn = DBConnect.getConnection() ;
 			
 			PreparedStatement st = conn.prepareStatement(sql) ;
+			//FACTORY
 			
 			ResultSet res = st.executeQuery() ;
+			//FACTORY
 			
 			while(res.next()) {
 				Station s = new Station(res.getInt("station_id"),
